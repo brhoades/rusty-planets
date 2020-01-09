@@ -4,10 +4,31 @@
 
 For [reading consortium](reading-consortium.github.io/).
 
-Let's make a universe simulator in a few hundred lines of Rust! Once it runs and does nothing, try adding gravity. When gravity works, add initial velocities and you'll get what I have above.
+## Objectives
+Let's make a universe simulator in a few hundred lines of Rust!
 
+ * Plumb the physics and rendering pipeline through draw_2d.
+ * Create multiple planets that rotate around the star.
 
-Usage:
+Bonus points (level in bracket):
+ * [Trivial] Use [clap](https://crates.io/crates/clap) to accept an arbitrary timescale.
+ * [Novice] Add moons for some planets.
+ * [Novice] Add an asteroid field.
+ * [Novice] Add orbit lines.
+ * [Novice] Click to spawn planets.
+ * [Novice] Add planet labels.
+ * [Average] Use [viewport transforms](http://docs.piston.rs/piston_window/piston_window/struct.Viewport.html) to accurately model the solar system.
+ * [Average] Implement panning and zooming.
+ * [Average] Thread and pool physics work.
+ * [Average] Use textures for planets.
+ * [Average] Add _accurate_ orbit lines.
+ * [Average] Add planet information on mouse over.
+ * [Master] Implement collision handling logic _well_ (break into pieces or remove smaller).
+ * [Master] Model planets in 3d and project to 2d.
+ * [Master] Back your physics engine by an event bus.
+ * [Grandmaster] Add shadows projected from stars.
+
+## Usage
 
 ```bash
 $ cargo run
