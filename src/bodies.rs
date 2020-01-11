@@ -10,9 +10,9 @@ use nalgebra::{Point2,Vector2};
 
 /***********************
  * Trait and struct definitions.
- * At minimu, set and tick need modification to get something usable.
+ * At minimum, set and tick need modification to get something usable.
  *
- * Just fill in the empty tubles, the empty methods in "impl", and complete fn main().
+ * Just fill in the empty tuples, the empty methods in "impl", and complete fn main().
  ***********************/
 pub trait Renderable {
     fn render(&self, ctx: &Context, graphics: &mut G2d);
@@ -83,7 +83,7 @@ impl Renderable for Planet {
 
 impl PhysicsBody for Planet {
     // Need to return some data to calculate the next frame...
-    // If you keep this method, this is likely where the math is.
+    // If you keep this method and feed its output into render, this is where the math is.
     //
     // Billy: math took me a bit to get 100% right; feel free to ask for a tip.
     fn tick(&self) -> () {
